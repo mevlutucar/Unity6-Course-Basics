@@ -3,15 +3,14 @@ using UnityEngine;
 public class TestingScript : MonoBehaviour
 {
 
-    int repeatAmount =1;
+
     void Awake()
     {
-        Debug.Log("Awake");
-        TestFnc();
+
     }
     void Start()
     {
-        Debug.Log("Start");
+        TestFnc();
     }
 
     // Update is called once per frame
@@ -22,7 +21,9 @@ public class TestingScript : MonoBehaviour
 
     void TestFnc()
     {
-        Debug.Log($"{repeatAmount} kez test fonksiyonu calisti.");
+        Debug.Log("Normal Log!");
+        Debug.LogWarning("Warning Log!");
+        Debug.LogError("Error Log!");
 
     }
 }
