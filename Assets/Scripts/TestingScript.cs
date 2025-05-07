@@ -4,10 +4,7 @@ using UnityEngine;
 public class TestingScript : MonoBehaviour
 {
 
-int number = 6;
-int number2 = 10;
-
-bool isTrue = false;
+int number = 5;
 
     void Awake()
     {
@@ -26,28 +23,19 @@ bool isTrue = false;
 
     void TestFnc()
     {
-        if(number > 6)
+        switch(number)
         {
-            Debug.Log("Number is bigger than 6!");
-        }
-        else if (number < 6)
-        {
-            Debug.Log("Number is less than 6!");
-        }
-        else if(number > 6 || number2 <= 10)
-        {
-            Debug.Log("Number is 6 or Number 2 is bigger or equal to 10!");
+            case 3:
+            Debug.Log("Number is 3!");
+            break;
 
-        }
-        else
-        {
-            Debug.Log($"Number is {number}!");
-        }
+            case 6:
+            Debug.Log("Number is 6!");
+            break;
 
-        if(!isTrue)
-        {
-            Debug.Log("Bool is false!");
-
+            default:
+            Debug.Log("Not entered any case!");
+            break;
         }
 
     }
