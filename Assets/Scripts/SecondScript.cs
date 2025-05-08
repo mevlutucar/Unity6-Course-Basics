@@ -1,17 +1,13 @@
 using UnityEngine;
-using mevlutUcarNameSpace;
 
 public class SecondScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+TestingScript testingScript;
+
     void Start()
     {
-        
+        testingScript.MyFnc();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

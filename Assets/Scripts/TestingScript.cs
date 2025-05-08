@@ -3,54 +3,26 @@ using System.Globalization;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace mevlutUcarNameSpace
-{
 
-
-}
 
 public class TestingScript : MonoBehaviour
 {
 
-List<int> numbersList = new List<int>();
+[SerializeField] private int variable = 5;
 
-    void Awake()
+[SerializeField] List<int> numbers = new List<int>();
+    public void MyFnc()
     {
+        Debug.Log($"My public function works! Variable value is: {variable}");
+
+        Debug.Log($"First number value of the list is:{numbers[0]}");
 
     }
+
     void Start()
     {
-        numbersList.Add(15);
-        numbersList.Add(25);
-        numbersList.Add(35);
-        PrintList();
-
-        numbersList.RemoveAt(1);
-        PrintList();
-
-        numbersList.Clear();
-        PrintList();
+        MyFnc();
     }
-
-    void Update()
-    {
-        
-    }
-
-void PrintList()
-{
-    /* for(int i = 0 ; i< numbersList.Count; i++)
-    {
-        Debug.Log($"List'te bulunan mevcut eleman: {numbersList[i]}");
-    } */
-
-    foreach(int myNumber in numbersList)
-    {
-        Debug.Log($"List'te bulunan mevcut eleman: {myNumber}");
-    }
-    Debug.Log("------------------------------");
-}
-    
 
 }
 
