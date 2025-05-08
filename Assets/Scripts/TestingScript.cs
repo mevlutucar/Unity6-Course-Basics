@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Globalization;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -5,51 +6,45 @@ using UnityEngine;
 public class TestingScript : MonoBehaviour
 {
 
-int number = 10;
+List<int> numbersList = new List<int>();
+
     void Awake()
     {
 
     }
     void Start()
     {
-        //ForLoopFnc();
-        //WhileLoopFnc();
-        DoWhileLoopFnc();
+        numbersList.Add(15);
+        numbersList.Add(25);
+        numbersList.Add(35);
+        PrintList();
+
+        numbersList.RemoveAt(1);
+        PrintList();
+
+        numbersList.Clear();
+        PrintList();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    void ForLoopFnc()
+void PrintList()
+{
+    /* for(int i = 0 ; i< numbersList.Count; i++)
     {
+        Debug.Log($"List'te bulunan mevcut eleman: {numbersList[i]}");
+    } */
 
-        for(int i = 0; i<10; i++)
-        {
-            Debug.Log($"For döngüsü, yazdırılan i = {i}");
-        }
-    }
-
-    void WhileLoopFnc()
+    foreach(int myNumber in numbersList)
     {
-        while(number > 0)
-        {
-            Debug.Log($"While döngüsü, şu anki sayı değeri: {number}");
-            number--;
-        }
+        Debug.Log($"List'te bulunan mevcut eleman: {myNumber}");
     }
+    Debug.Log("------------------------------");
+}
+    
 
-    void DoWhileLoopFnc()
-    {
-        do
-        {
-            Debug.Log($"Do-While döngüsü, şu anki sayı değeri: {number}");
-            number--;
-        }
-        while(number > 0);
-    }
-
-    }
+}
 
