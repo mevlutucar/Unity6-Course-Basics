@@ -1,18 +1,20 @@
 using System.Globalization;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TestingScript : MonoBehaviour
 {
 
-int number = 5;
-
+int number = 10;
     void Awake()
     {
 
     }
     void Start()
     {
-        TestFnc();
+        //ForLoopFnc();
+        //WhileLoopFnc();
+        DoWhileLoopFnc();
     }
 
     // Update is called once per frame
@@ -21,22 +23,33 @@ int number = 5;
         
     }
 
-    void TestFnc()
+    void ForLoopFnc()
     {
-        switch(number)
+
+        for(int i = 0; i<10; i++)
         {
-            case 3:
-            Debug.Log("Number is 3!");
-            break;
-
-            case 6:
-            Debug.Log("Number is 6!");
-            break;
-
-            default:
-            Debug.Log("Not entered any case!");
-            break;
+            Debug.Log($"For döngüsü, yazdırılan i = {i}");
         }
+    }
+
+    void WhileLoopFnc()
+    {
+        while(number > 0)
+        {
+            Debug.Log($"While döngüsü, şu anki sayı değeri: {number}");
+            number--;
+        }
+    }
+
+    void DoWhileLoopFnc()
+    {
+        do
+        {
+            Debug.Log($"Do-While döngüsü, şu anki sayı değeri: {number}");
+            number--;
+        }
+        while(number > 0);
+    }
 
     }
-}
+
