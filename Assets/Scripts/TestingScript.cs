@@ -3,6 +3,12 @@ using System.Globalization;
 using Unity.VisualScripting;
 using UnityEngine;
 
+namespace mevlutUcarNameSpace
+{
+
+
+}
+
 public class TestingScript : MonoBehaviour
 {
 
