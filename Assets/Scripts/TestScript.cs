@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    [SerializeField] Rigidbody rb;
 
-    void Awake()
+    void OnEnable()
     {
-        rb = GetComponent<Rigidbody>();
+        Debug.Log("Obje açıldı.");
     }
-    void Start()
+
+    void OnDisable()
     {
-        rb.useGravity=false;
+        Debug.Log("Obje kapandı.");
     }
 
 }
